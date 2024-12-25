@@ -31,7 +31,7 @@
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <img src="images/triangle.png" class="h-48" alt="" />
             <h2 class="text-xl font-bold">Triangle</h2>
             <p>Area(A) = 0.5 x b x h</p>
             <div class="space-x-3">
@@ -51,49 +51,57 @@
               />
               <span>cm</span>
             </div>
-            <p>Area: <span id="area-holder"></span> cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full" onclick="calculateArea()">
+            <p>Area: <span id="triangle-area-span">0</span> cm<sup>2</sup></p>
+            <button
+              class="btn btn-primary w-full"
+              onclick="calculateTriangle()"
+            >
               Calculate
             </button>
           </div>
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
-            <h2 class="text-xl font-bold">Triangle</h2>
-            <p>Area(A) = 0.5 x b x h</p>
+            <img src="images/rectangle.png" class="h-48" alt="" />
+            <h2 class="text-xl font-bold">Rectangle</h2>
+            <p>Area(A) = w X l</p>
             <div class="space-x-3">
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 type="text"
-                placeholder="b"
-                id=""
+                placeholder="w"
+                id="rectangle-width"
               />
               <span>cm</span>
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 p-3
                 type="text"
-                placeholder="h"
-                id=""
+                placeholder=""
+                id="rectangle-length"
               />
               <span>cm</span>
             </div>
-            <p>Area: 0 cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+            <p>Area: <span id="rectangle-area-span">0</span> cm<sup>2</sup></p>
+            <button
+              class="btn btn-primary w-full"
+              onclick="calculateRectangle()"
+            >
+              Calculate
+            </button>
           </div>
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
-            <h2 class="text-xl font-bold">Triangle</h2>
-            <p>Area(A) = 0.5 x b x h</p>
+            <img src="images/parallelogram.png" class="h-48" alt="" />
+            <h2 class="text-xl font-bold">Parallelogram</h2>
+            <p>Area(A) = b x h</p>
             <div class="space-x-3">
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 type="text"
                 placeholder="b"
-                id=""
+                id="parallelogram-base"
               />
               <span>cm</span>
               <input
@@ -101,90 +109,106 @@
                 p-3
                 type="text"
                 placeholder="h"
-                id=""
+                id="parallelogram-height"
               />
               <span>cm</span>
             </div>
-            <p>Area: 0 cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+            <p>
+              Area: <span id="parallelogram-area-span">0</span> cm<sup>2</sup>
+            </p>
+            <button
+              class="btn btn-primary w-full"
+              onclick="calculateParallelogram()"
+            >
+              Calculate
+            </button>
           </div>
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
-            <h2 class="text-xl font-bold">Triangle</h2>
-            <p>Area(A) = 0.5 x b x h</p>
+            <img src="images/rhombus.png" class="h-48" alt="" />
+            <h2 class="text-xl font-bold">Rhombus</h2>
+            <p>Area(A) = 0.5 x d <sub>1</sub> x d <sub>2</sub></p>
             <div class="space-x-3">
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 type="text"
-                placeholder="b"
-                id=""
+                placeholder="d1"
+                id="rhombus-d1"
               />
               <span>cm</span>
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 p-3
                 type="text"
-                placeholder="h"
-                id=""
+                placeholder="d2"
+                id="rhombus-d2"
               />
               <span>cm</span>
             </div>
-            <p>Area: 0 cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+            <p>Area: <span id="rhombus-area-span">0</span> cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="calculateRhombus()">
+              Calculate
+            </button>
           </div>
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
-            <h2 class="text-xl font-bold">Triangle</h2>
-            <p>Area(A) = 0.5 x b x h</p>
+            <img src="images/pentagon.png" class="h-48" alt="" />
+            <h2 class="text-xl font-bold">Pentagon</h2>
+            <p>Area(A) = 0.5 x p x a</p>
             <div class="space-x-3">
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 type="text"
-                placeholder="b"
-                id=""
+                placeholder="p"
+                id="pentagon-perimeter"
               />
               <span>cm</span>
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 p-3
                 type="text"
-                placeholder="h"
-                id=""
+                placeholder="a"
+                id="pentagon-apothem"
               />
               <span>cm</span>
             </div>
-            <p>Area: 0 cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+            <p>Area: <span id="pentagon-area-span">0</span> cm<sup>2</sup></p>
+            <button
+              class="btn btn-primary w-full"
+              onclick="calculatePentagon()"
+            >
+              Calculate
+            </button>
           </div>
           <div
             class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
           >
-            <img src="images/triangle.png" class="w-3/4" alt="" />
-            <h2 class="text-xl font-bold">Triangle</h2>
-            <p>Area(A) = 0.5 x b x h</p>
+            <img src="images/ellipse.png" class="h-48" alt="" />
+            <h2 class="text-xl font-bold">Ellipse</h2>
+            <p>Area(A) = &#960;ab</p>
             <div class="space-x-3">
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 type="text"
-                placeholder="b"
-                id=""
+                placeholder="a"
+                id="ellipse-a"
               />
               <span>cm</span>
               <input
                 class="w-20 bg-gray-100 rounded-sm border-0 p-1"
                 p-3
                 type="text"
-                placeholder="h"
-                id=""
+                placeholder="b"
+                id="ellipse-b"
               />
               <span>cm</span>
             </div>
-            <p>Area: 0 cm<sup>2</sup></p>
-            <button class="btn btn-primary w-full">Calculate</button>
+            <p>Area: <span id="ellipse-area-span">0</span> cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="calculateEllipse()">
+              Calculate
+            </button>
           </div>
           <div></div>
           <div></div>
