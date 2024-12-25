@@ -13,16 +13,199 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body data-theme="light">
+  <body data-theme="light" class="p-2 md:p-5 lg:p-10">
     <header>
-      <h1>Header</h1>
+      <nav class="flex justify-between items-center bg-blue-50 rounded-md p-3">
+        <h1 class="text-2xl">
+          <span class="font-bold">Interactive</span> <br />
+          Geometry Genius
+        </h1>
+        <button class="btn btn-primary">Blog</button>
+      </nav>
     </header>
     <main>
-      <h2>Main</h2>
+      <section class="grid grid-cols-4 gap-5">
+        <section
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5 col-span-3"
+        >
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id="triangle-base"
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id="triangle-height"
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: <span id="area-holder"></span> cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="calculateArea()">
+              Calculate
+            </button>
+          </div>
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id=""
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id=""
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: 0 cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+          </div>
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id=""
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id=""
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: 0 cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+          </div>
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id=""
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id=""
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: 0 cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+          </div>
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id=""
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id=""
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: 0 cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full" onclick="">Calculate</button>
+          </div>
+          <div
+            class="rounded-lg border border-gray-300 flex flex-col items-center p-3 gap-2"
+          >
+            <img src="images/triangle.png" class="w-3/4" alt="" />
+            <h2 class="text-xl font-bold">Triangle</h2>
+            <p>Area(A) = 0.5 x b x h</p>
+            <div class="space-x-3">
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                type="text"
+                placeholder="b"
+                id=""
+              />
+              <span>cm</span>
+              <input
+                class="w-20 bg-gray-100 rounded-sm border-0 p-1"
+                p-3
+                type="text"
+                placeholder="h"
+                id=""
+              />
+              <span>cm</span>
+            </div>
+            <p>Area: 0 cm<sup>2</sup></p>
+            <button class="btn btn-primary w-full">Calculate</button>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+        <section class="col-span-1 rounded-lg border border-gray-300 p-3 mt-5">
+          <h3 class="text-xl font-bold border-b-2 border-black text-center">
+            Area Calculation
+          </h3>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Quod, adipisci nisi?</li>
+            <li>Perferendis, alias. Asperiores.</li>
+            <li>Consectetur, in rerum.</li>
+            <li>Incidunt, fugiat dicta.</li>
+          </ul>
+        </section>
+      </section>
     </main>
-    <footer>
-      <h3>Footer</h3>
-    </footer>
-    <script src="app/app.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
